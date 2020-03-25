@@ -5,15 +5,22 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "nodemon"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@slack/bolt": "^1.8.0",
+    "aws-serverless-express": "^3.3.6"
+  },
+  "devDependencies": {
     "@types/aws-serverless-express": "^3.3.3",
     "@types/node": "^13.9.3",
-    "aws-serverless-express": "^3.3.6",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.8.1",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.8.3"
   }
 }

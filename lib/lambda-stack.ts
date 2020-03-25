@@ -32,8 +32,7 @@ export class LambdaStack extends Stack {
 
     new codedeploy.LambdaDeploymentGroup(this, 'DeploymentGroup', {
       alias,
-      deploymentConfig:
-        codedeploy.LambdaDeploymentConfig.LINEAR_10PERCENT_EVERY_1MINUTE
+      deploymentConfig: codedeploy.LambdaDeploymentConfig.ALL_AT_ONCE
     });
 
     // defines an API Gateway REST API resource backed by our "hello" function.
