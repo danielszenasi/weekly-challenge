@@ -14,6 +14,18 @@ const app: App = new App({
 
 app.event('app_home_opened', async ({ event, context }) => {
   try {
+    const conversations = await app.client.conversations.history({
+      token: context.botToken,
+      channel: 'CN89G5ZTL'
+    });
+
+    if (conversations.ok && conversations.response_metadata) {
+      console.log(conversations.response_metadata);
+      // conversations.response_metadata.messages.map(
+      //   message => message.reactions
+      // );
+    }
+
     /* view.publish is the method that your app uses to push a view to the Home tab */
     const result = await app.client.views.publish({
       /* retrieves your xoxb token from context */
